@@ -70,7 +70,7 @@ export class App extends Component {
 
 const AppStyled = styled.div`
 width: 100%;
-height: 100vh;
+min-height: 100vh;
 margin: 0 auto;
 padding-left: 20px;
 padding-right: 20px;
