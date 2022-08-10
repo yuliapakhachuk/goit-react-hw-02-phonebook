@@ -4,7 +4,7 @@ import Form from "./Form/Form";
 import ContactList from "./ContactList/ContactList";
 import Section from './Section/Section';
 import Filter from './Filter/Filter';
-import styled from '@emotion/styled';
+import {AppStyled} from './App.styled';
 
 export class App extends Component {
   state = {
@@ -50,10 +50,10 @@ export class App extends Component {
       contact.name.toLowerCase().includes(normalizedFilter))
       return (
         <AppStyled>
-          <Section title={"Phonebook"}>
-            <Form onSubmit={this.createNewContact}></Form>
+          <Section title="Phonebook">
+            <Form onSubmit={this.createNewContact}/>
           </Section>
-          <Section title={"Contacts"}>
+          <Section title="Contacts">
             <Filter
                 value={this.state.filter}
                 onChange={this.changeFilter}
@@ -68,15 +68,3 @@ export class App extends Component {
   }
 };
 
-const AppStyled = styled.div`
-width: 100%;
-min-height: 100vh;
-margin: 0 auto;
-padding-left: 20px;
-padding-right: 20px;
-background-size: 20px 20px;
-background-color: #f7ddb1;
-background-image:
-    linear-gradient(to right, rgba(128, 128, 128, 0.367) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(128, 128, 128, 0.367) 1px, transparent 1px);
-`
